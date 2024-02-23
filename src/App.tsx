@@ -12,6 +12,7 @@ export const App = () => {
           color: 'yellow.300',
           textAlign: 'center',
           textStyle: '4xl',
+          fontSize: '7',
         })}
       >
         <span>🐼</span>

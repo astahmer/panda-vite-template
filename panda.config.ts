@@ -1,31 +1,40 @@
 import { defineConfig } from '@pandacss/dev'
-import { recipes } from './theme/recipes'
-import { semanticTokens, tokens } from './theme/tokens'
+import { createPreset } from '@park-ui/panda-preset'
+import { removeUnusedCssVars } from './remove-unused-css-vars'
+import { removeUnusedKeyframes } from './remove-unused-keyframes'
 
 export default defineConfig({
   // Whether to use css reset
   preflight: true,
-
+  jsxFramework: 'solid',
+  jsxStyleProps: 'minimal',
+  // lightningcss: true,
   // Where to look for your css declarations
-  include: ['./src/**/*.{js,jsx,ts,tsx}', './pages/**/*.{js,jsx,ts,tsx}'],
-
+  include: ['./src/**/*.{ts,tsx}'],
+  presets: [
+    '@pandacss/preset-base',
+    createPreset({
+      accentColor: 'neutral',
+      grayColor: 'neutral',
+      // additionalColors: ['red'],
+    }),
+  ],
   // Files to exclude
   exclude: [],
 
   // Useful for theme customization
   theme: {
-    extend: { tokens, semanticTokens, recipes },
+    extend: {},
   },
-  globalCss: {
-    'html, body': {
-      color: 'text.main',
-      backgroundColor: 'bg.main',
+
+  // Optimize options: https://github.com/chakra-ui/panda/discussions/2236
+  hooks: {
+    'cssgen:done': ({ artifact, content }) => {
+      if (artifact === 'styles.css') {
+        return removeUnusedCssVars(removeUnusedKeyframes(content))
+      }
     },
   },
-
   // The output directory for your css system
   outdir: 'styled-system',
-
-  // The JSX framework to use
-  jsxFramework: 'react',
 })
