@@ -6,7 +6,7 @@ import { removeUnusedKeyframes } from './remove-unused-keyframes'
 export default defineConfig({
   // Whether to use css reset
   preflight: true,
-  jsxFramework: 'solid',
+  jsxFramework: 'react',
   jsxStyleProps: 'minimal',
   // lightningcss: true,
   // Where to look for your css declarations
@@ -28,13 +28,13 @@ export default defineConfig({
   },
 
   // Optimize options: https://github.com/chakra-ui/panda/discussions/2236
-  hooks: {
-    'cssgen:done': ({ artifact, content }) => {
-      if (artifact === 'styles.css') {
-        return removeUnusedCssVars(removeUnusedKeyframes(content))
-      }
-    },
-  },
+  // hooks: {
+  //   'cssgen:done': ({ artifact, content }) => {
+  //     if (artifact === 'styles.css') {
+  //       return removeUnusedCssVars(removeUnusedKeyframes(content))
+  //     }
+  //   },
+  // },
   // The output directory for your css system
   outdir: 'styled-system',
 })
