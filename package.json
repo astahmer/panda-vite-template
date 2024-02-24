@@ -10,7 +10,7 @@
     "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "dev:css": "pnpm css:gen -w",
     "css:gen": "panda cssgen --lightningcss",
-    "park-ui:up": "bunx @park-ui/cli add --all",
+    "park-ui:up": "pnpm dlx @park-ui/cli add --all",
     "preview": "vite preview"
   },
   "dependencies": {

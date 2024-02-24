@@ -2,7 +2,7 @@ import { Editable } from '@ark-ui/react/editable'
 import type { ComponentProps } from 'react'
 import { styled } from 'styled-system/jsx'
 import { editable } from 'styled-system/recipes'
-import { createStyleContext } from '~/lib/utils/create-style-context'
+import { createStyleContext } from '~/components/create-style-context'
 
 const { withProvider, withContext } = createStyleContext(editable)
 

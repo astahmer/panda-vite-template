@@ -2,7 +2,7 @@ import { Dialog } from '@ark-ui/react/dialog'
 import type { ComponentProps } from 'react'
 import { styled } from 'styled-system/jsx'
 import { dialog } from 'styled-system/recipes'
-import { createStyleContext } from '~/lib/utils/create-style-context'
+import { createStyleContext } from '~/components/create-style-context'
 
 const { withProvider, withContext } = createStyleContext(dialog)
 

@@ -2,7 +2,7 @@ import { RadioGroup } from '@ark-ui/react/radio-group'
 import type { ComponentProps } from 'react'
 import { styled } from 'styled-system/jsx'
 import { radioGroup } from 'styled-system/recipes'
-import { createStyleContext } from '~/lib/utils/create-style-context'
+import { createStyleContext } from '~/components/create-style-context'
 
 const { withProvider, withContext } = createStyleContext(radioGroup)
 

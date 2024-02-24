@@ -2,7 +2,7 @@ import { ColorPicker } from '@ark-ui/react/color-picker'
 import type { ComponentProps } from 'react'
 import { styled } from 'styled-system/jsx'
 import { colorPicker } from 'styled-system/recipes'
-import { createStyleContext } from '~/lib/utils/create-style-context'
+import { createStyleContext } from '~/components/create-style-context'
 
 const { withProvider, withContext } = createStyleContext(colorPicker)
 
