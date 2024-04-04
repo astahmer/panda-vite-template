@@ -28,4 +28,6 @@ export default defineConfig({
 
   // The JSX framework to use
   jsxFramework: 'react',
+  importMap: ['/styled-system', '/panda'],
+  // syntax: 'template-literal',
 })

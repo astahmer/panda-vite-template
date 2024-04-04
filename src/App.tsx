@@ -1,5 +1,11 @@
-import { css } from '../styled-system/css'
+// import { css } from '../styled-system/css'
+// import { css } from '../styled-system/css'
 import { center } from '../styled-system/patterns'
+import { css } from './panda/css'
+
+const className = css.tag`
+padding: 10px;
+`
 
 export const App = () => {
   return (
@@ -15,7 +21,7 @@ export const App = () => {
         })}
       >
         <span>🐼</span>
-        <span>Hello from Panda</span>
+        <span className={className}>Hello from Panda</span>
       </div>
     </div>
   )
