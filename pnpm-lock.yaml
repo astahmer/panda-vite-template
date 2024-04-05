@@ -5,6 +5,9 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  '@pandacss/shared':
+    specifier: ^0.37.1
+    version: 0.37.1
   react:
     specifier: ^18.2.0
     version: 18.2.0
@@ -16,6 +19,9 @@ devDependencies:
   '@pandacss/dev':
     specifier: ^0.37.1
     version: 0.37.1(typescript@5.4.4)
+  '@pandacss/types':
+    specifier: ^0.37.1
+    version: 0.37.1
   '@types/react':
     specifier: ^18.2.74
     version: 18.2.74
@@ -40,6 +46,9 @@ devDependencies:
   eslint-plugin-react-refresh:
     specifier: ^0.4.6
     version: 0.4.6(eslint@8.57.0)
+  ts-morph:
+    specifier: ^21.0.1
+    version: 21.0.1
   typescript:
     specifier: ^5.4.4
     version: 5.4.4
@@ -583,7 +592,6 @@ packages:
 
   /@pandacss/shared@0.37.1:
     resolution: {integrity: sha512-G9X2dqf7FKqpG1Zf0BNbHyFBlErAnORtE/wr12w8SPLNBVXluj+WnOPg00OI6Uu/neg6SgJRJSR+/9cSArj7sA==}
-    dev: true
 
   /@pandacss/token-dictionary@0.37.1:
     resolution: {integrity: sha512-MNe/E81gkz7tAeaQFVLG6B9eYwpIuWOqMsgKIE8xYNuVwGk41sNQKTFPZvdmDj2+Rn5AiekQ7Vf+DL9HJg3Ipg==}
