@@ -1,24 +1,30 @@
 @layer recipes {
   @layer _base {
-    .button {
-      display: flex;
+
+    .unsorted {
+      display: table;
+}
 }
 
-    .input {
-      display: block;
+  .unsorted--variant_outline {
+    outline: 1px solid var(--colors-red-500);
 }
 
     .text {
       display: inline;
 }
+
+  .text--visual_funky {
+    background: var(--colors-red-200);
+    color: var(--colors-slate-800);
 }
 
-  .button--shape_square {
-    border-radius: 0;
+  .text--visual_edgy {
+    border: 1px solid var(--colors-red-500);
 }
 
-  .button--shape_circle {
-    border-radius: var(--radii-full);
+    .input {
+      display: block;
 }
 
   .input--size_sm {
@@ -30,13 +36,15 @@
     padding: var(--spacing-8);
     font-size: 40px;
 }
-
-  .text--visual_funky {
-    background: var(--colors-red-200);
-    color: var(--colors-slate-800);
+    .button {
+      display: flex;
 }
 
-  .text--visual_edgy {
-    border: 1px solid var(--colors-red-500);
+  .button--shape_square {
+    border-radius: 0;
+}
+
+  .button--shape_circle {
+    border-radius: var(--radii-full);
 }
 }
