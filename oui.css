@@ -1,0 +1,42 @@
+@layer recipes {
+  @layer _base {
+    .button {
+      display: flex;
+}
+
+    .input {
+      display: block;
+}
+
+    .text {
+      display: inline;
+}
+}
+
+  .button--shape_square {
+    border-radius: 0;
+}
+
+  .button--shape_circle {
+    border-radius: var(--radii-full);
+}
+
+  .input--size_sm {
+    padding: var(--spacing-4);
+    font-size: 12px;
+}
+
+  .input--size_lg {
+    padding: var(--spacing-8);
+    font-size: 40px;
+}
+
+  .text--visual_funky {
+    background: var(--colors-red-200);
+    color: var(--colors-slate-800);
+}
+
+  .text--visual_edgy {
+    border: 1px solid var(--colors-red-500);
+}
+}

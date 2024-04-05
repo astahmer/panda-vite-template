@@ -14,7 +14,51 @@ export default defineConfig({
 
   // Useful for theme customization
   theme: {
-    extend: { tokens, semanticTokens, recipes },
+    extend: {
+      tokens,
+      semanticTokens,
+      recipes: {
+        button: {
+          className: 'button',
+          base: {
+            display: 'flex',
+          },
+          variants: {
+            shape: {
+              square: { borderRadius: '0' },
+              circle: { borderRadius: 'full' },
+            },
+          },
+          staticCss: ['*'],
+        },
+        input: {
+          className: 'input',
+          base: {
+            display: 'block',
+          },
+          variants: {
+            size: {
+              sm: { padding: '4', fontSize: '12px' },
+              lg: { padding: '8', fontSize: '40px' },
+            },
+          },
+          staticCss: ['*'],
+        },
+        text: {
+          className: 'text',
+          base: {
+            display: 'inline',
+          },
+          variants: {
+            visual: {
+              funky: { bg: 'red.200', color: 'slate.800' },
+              edgy: { border: '1px solid {colors.red.500}' },
+            },
+          },
+          staticCss: ['*'],
+        },
+      },
+    },
   },
   globalCss: {
     'html, body': {
