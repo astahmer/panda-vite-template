@@ -28,4 +28,7 @@ export default defineConfig({
 
   // The JSX framework to use
   jsxFramework: 'react',
+  //
+  strictPropertyValues: true,
+  strictTokens: true,
 })
