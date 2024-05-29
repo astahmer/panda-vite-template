@@ -40,6 +40,9 @@ devDependencies:
   eslint-plugin-react-refresh:
     specifier: ^0.4.6
     version: 0.4.6(eslint@8.57.0)
+  postcss:
+    specifier: ^8.4.38
+    version: 8.4.38
   typescript:
     specifier: ^5.4.4
     version: 5.4.4
@@ -1059,7 +1062,7 @@ packages:
       '@vue/shared': 3.4.19
       estree-walker: 2.0.2
       magic-string: 0.30.8
-      postcss: 8.4.35
+      postcss: 8.4.38
       source-map-js: 1.2.0
     dev: true
 
