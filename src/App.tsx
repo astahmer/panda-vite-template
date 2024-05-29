@@ -1,5 +1,12 @@
-import { css } from '../styled-system/css'
 import { center } from '../styled-system/patterns'
+import { css } from './panda/css'
+
+const className = css.tag`
+padding: 10px;
+font-size: 20px;
+color: green;
+background-color: token(colors.blue.100);
+`
 
 export const App = () => {
   return (
@@ -15,7 +22,8 @@ export const App = () => {
         })}
       >
         <span>🐼</span>
-        <span>Hello from Panda</span>
+        <span> Hello from Panda</span>
+        <span className={className}>Using css.tag`xxx`</span>
       </div>
     </div>
   )
